@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <style>
+      html {
+        font-size: 18px;
+      }
+      li {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>
+      Witryna internetowa
+    </h4>
+    <h4></h4>
+    Cechy witryny:<br />
+    <ul>
+      <li>Strona główna o nazwie <i>formaty.html</i></li>
+      <li>Zastosowany właściwy standart kodowania polskich znaków</li>
+      <li>Tytuł strony widoczny na karcie przeglądarki: "Formatowanie"</li>
+      <li>
+        Arkusz stylów o nazwie <i>styl2.css</i> prawidłowo podłączony z kodem
+        strony
+      </li>
+      <li>
+        Podział strony na bloki: baner, poniżej trzy panele górne, ułożone obok
+        siebie, poniżej panel główny oraz na dole stopka. Podział zrealizowany
+        za pomocą znaczników sekcji, zgodnie z obrazem 2
+      </li>
+      <li>
+        Zawartość banera:
+        <ol>
+          <li>
+            Nagłówek pierwszego stopnia o treści "Formatowanie dokumentów HTML"
+          </li>
+        </ol>
+      </li>
+      <li>
+        Zawartość pierwszego panelu górnego:
+        <ol>
+          <li>Nagłówek drugiego stopnia o treści:"Przykład listy - hobby"</li>
+          <li>
+            Lista punktowana (nieuporządkowana) z zagnieżdżoną listą numerowaną
+            (uporządkowaną) treść przedstawia obraz 3.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Zawartość drugiego panelu górnego:
+        <ol>
+          <li>
+            Nagłówek drugiego stopnia o treści: "Przykład tabeli - rozkład dnia"
+          </li>
+          <li>
+            Tabela o wymiarze: 2 kolumny na 5 wierszy, z czego pierwszy wiersz
+            jest wierszem nagłówkowym. W drugiej kolumnie dwa ostatnie wiersze
+            są scalone. Tekst, który powinien znajdować się w komórkach
+            przedstawia obraz 4.
+          </li>
+        </ol>
+      </li>
+      <li>
+        Zawartość trzeciego panelu głównego:
+        <ol>
+          <li>obraz napisany z tekstem alternatywnym "technologia web"</li>
+        </ol>
+      </li>
+      <li>
+        Zawartość panelu głównego:
+        <ol>
+          <li>
+            Paragraf (akapit) z tekstem "Podaj rozmiar tekstu w procentach: ",
+            polem edycyjnym typu numerycznego oraz znakiem "%" za polem
+          </li>
+          <li>
+            Paragraf z listą wyboru, w której znajdują się elementy: "prosty"
+            oraz "kursywa"
+          </li>
+          <li>
+            Paragraf z tekstem "Jakim kolorem sformatować tekst? Wybierz
+            przycisk", pod tekstem trzy przyciski. Wciśnięcie każdego przycisku
+            wywołuje skrypt
+          </li>
+          <li>
+            Paragraf z tekstem "To jest przykład paragrafu, który może być
+            dowolnie formatowany przez Java Script"
+          </li>
+        </ol>
+      </li>
+      <li>
+        Zawartość stopki:
+        <ol>
+          <li>
+            Paragraf o treści "Formatowaniem tekstu zajmował się:", dalej
+            wstawiony numer PESEL, numer PESEL jest zapisany czcionką pochyloną
+          </li>
+          <li>
+            Odnośnik o treści "Odwiedź także" prowadzący do strony
+            formatowanie.pl. Odnośnik otwiera się w osobnym oknie.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <h4>
+      Styl CSS witryny internetowej
+    </h4>
+    Plik <i>styl2.css</i> zawiera formatowanie
+    <br />
+    <ul>
+      <li>Wspólne dla całej strony: krój czcionki Georgia</li>
+      <li>
+        Dla banera: kolor tła #824555, biały kolor czcionki, wyrównanie tekstu
+        do środka, marginesy wewnętrzne 20px
+      </li>
+      <li>
+        Wspólne dla pierwszego i drugiego panelu górnego: kolor tła #A26475,
+        biały kolor czcionki, szerokość 30%, wysokość 300 px
+      </li>
+      <li>
+        Dla trzeciego panelu górnego: kolor tła #A26475, biały kolor czcionki,
+        szerokość 40% wysokość 300 px, wyrównanie tekstu do prawej strony
+      </li>
+      <li>
+        Dla panelu głównego: kolor tła #F0EAE2, marginesy wewnętrzne 50 px
+      </li>
+      <li>
+        Dla stopki: kolor tła #824555, biały kolor czcionki, wyrównanie tekstu
+        do środka, marginesy wewnętrzne 20 px
+      </li>
+      <li>
+        Wspólne dla selektora tabeli, komórki i komórki nagłówka: obramowanie
+        2px, linią ciągłą kolor #69293A, marginesy wewnętrzne 7px, obramowanie
+        sąsiednich komórek tabeli za pomocą wspólnej linii (komórki nie są
+        obramowanie osobnymi liniami)
+      </li>
+      <li>Dla selektora lisy punktowanej: styl punktora - kwadrat</li>
+      <li>Dla pierwszego przycisku kolor tła czerwony</li>
+      <li>Dla drugiego przycisku kolor tła zielony</li>
+      <li>Dla trzeciego przycisku kolor tła niebieski</li>
+    </ul>
+    <h4>
+      Skrypt
+    </h4>
+    Wymagania dotyczące skryptu:
+    <br />
+    <ul>
+      <li>
+        Wykonywanie po stronie przeglądarki, wywoływany przez zdarzenie
+        kliknięcia w dowolny przycisk
+      </li>
+      <li>
+        Skrypt ma za zadanie zmienić styl CSS dla paragrafu o treści "To jest
+        przykład paragrafu, który..." znajdującego się w panelu głównym
+      </li>
+      <li>
+        Po wciśnięciu czerwonego przycisku, zmieniony jest kolor tekstu
+        paragrafu na czerwony. Po wciśnięciu zielonego przycisku - na zielony.
+        Po wciśnięciu niebieskiego przycisku - na niebieski
+      </li>
+      <li>
+        Ponadto wciśnięcie dowolnego przycisku powoduje:
+        <ol>
+          <li>
+            Pobranie wartości z pola edycyjnego i ustawienie rozmiaru czcionki
+            paragrafu pobraną wartością wyrażoną w procentach. Na przykład,
+            jeżeli wpisano wartość 150 - rozmiar czcionki powinien być ustawiony
+            na "150%"
+          </li>
+          <li>
+            Pobranie wyboru z listy i ustawienie czcionki paragrafu na pochyłą
+            lub wyprostowaną
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
