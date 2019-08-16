@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <style>
+      html {
+        font-size: 18px;
+      }
+      li {
+        line-height: 1.5;
+      }
+      table,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>
+      Witryna internetowa
+    </h4>
+    Witryna internetowa składa się z trzech podstron: <i>index.html</i>,
+    <i>sprawdz.html</i> i <i>reguly.html</i>. Strony mają wspólny szablon zgodny
+    z rysunkiem 2.<br />
+
+    <ul>
+      <li>zastosowany właściwy standard kodowania polskich znaków;</li>
+      <li>
+        tytuł strony widoczny na karcie przeglądarki: „Wskaźnik jakości hasła”;
+      </li>
+      <li>
+        arkusz stylów umieszczony w osobnym pliku o nazwie: <i>styl2.css</i>;
+      </li>
+      <li>
+        podział strony na bloki: baner, panele lewy i prawy, stopka;
+        zrealizowany za pomocą znaczników sekcji (np. znacznika div);
+      </li>
+      <li>
+        zawartość banera: nagłówek pierwszego stopnia o treści: „Weryfikacja
+        jakości hasła”; tekst ten jest odsyłaczem i prowadzi do strony
+        <i>index.html</i>;
+      </li>
+      <li>
+        zawartość panelu lewego:<br />&nbsp;– nagłówek drugiego stopnia o
+        treści: „Wybierz opcję”,<br />&nbsp;– poniżej lista nienumerowana z
+        elementami: „Sprawdź hasło” oraz „Reguły tworzenia hasła”. Każdy z
+        elementów listy jest odsyłaczem i prowadzi kolejno do stron: 1 –
+        <i>sprawdz.html</i>, 2 - <i>reguly.html</i>&nbsp;
+      </li>
+      <li>
+        zawartość stopki: nagłówek trzeciego stopnia o treści: „Wskaźnik jakości
+        hasła”, poniżej paragraf (akapit) o treści: „Twórca strony: ”, dalej
+        wpisany numer PESEL zdającego.&nbsp;
+      </li>
+    </ul>
+    <h4>
+      Podstrony witryny
+    </h4>
+    Podstrony witryny różnią się jedynie zawartością panelu prawego.<br />
+    <h4>Cechy panelu prawego dla pliku <i>index.html</i>:</h4>
+    <ul>
+      <li>wstawiony obraz rysunek.png.</li>
+    </ul>
+    <h4>
+      Cechy panelu prawego dla pliku sprawdz.html:
+    </h4>
+    <ul>
+      <li>
+        tekst paragrafu: „Wpisz hasło:”, następnie pole tekstowe do wprowadzenia
+        hasła, następnie przycisk z tekstem „Weryfikuj”. Wszystkie trzy elementy
+        w jednej linii;
+      </li>
+      <li>
+        cechy pola tekstowego: pole pozwala na sekretne wprowadzenie hasła; w
+        czasie gdy wpisywany jest tekst, pole pokazuje kropki;
+      </li>
+      <li>
+        cechy przycisku „Weryfikuj”: po wciśnięciu jest wykonywany skrypt, jego
+        opis znajduje się w dalszej części arkusza;
+      </li>
+      <li>wygląd panelu prawego przedstawia rysunek 3.</li>
+    </ul>
+    <h4>
+      Cechy panelu prawego dla pliku reguly.html:
+    </h4>
+    <ul>
+      <li>tabela z nagłówkami kolumn. Zawartość tekstu zgodna z tabelą 1.</li>
+    </ul>
+    <table>
+      <caption>
+        Tabela 1. Zasady tworzenia hasła
+      </caption>
+      <tbody>
+        <tr>
+          <td>Jakość hasła</td>
+          <td>Opis</td>
+        </tr>
+        <tr>
+          <td>dobre</td>
+          <td>długość 7 znaków i więcej, zawiera przynajmniej jedną cyfrę</td>
+        </tr>
+        <tr>
+          <td>średnie</td>
+          <td>długość 4 do 6 znaków, zawiera przynajmniej jedną cyfrę</td>
+        </tr>
+        <tr>
+          <td>słabe</td>
+          <td>inne przypadki</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <i>Uwaga: powyższe zasady zostały uproszczone do wymogów tego zadania.</i>
+    <div>
+      <h4>
+        Styl CSS witryny
+      </h4>
+      <div>
+        Styl CSS jest zdefiniowany w osobnym pliku o nazwie
+        <i>styl2.css</i> oraz prawidłowo dołączony do pliku z kodem strony.
+        Zawiera:
+      </div>
+      <div>
+        Formatowanie sekcji:
+      </div>
+      <div>
+        <ul>
+          <li>
+            baner: kolor tła #08826A, wysokość 60px, krój pisma Verdana,
+            wyrównanie tekstu do środka;
+          </li>
+          <li>
+            panel lewy: kolor tła #1E9880, wysokość 550px, szerokość 30%;&nbsp;
+          </li>
+          <li>
+            panel prawy: kolor tła #9AC8BF, wysokość 550px, szerokość 70%,
+            wyrównanie tekstu do środka;
+          </li>
+          <li>
+            stopka: kolor tła #08826A, krój pisma Verdana, biały kolor,
+            wyrównanie tekstu do prawej strony.
+          </li>
+        </ul>
+        Formatowanie znaczników:
+      </div>
+      <div>
+        <ul>
+          <li>odsyłacz: kolor czcionki biały;</li>
+          <li>
+            obraz: marginesy zewnętrzne 20px, marginesy wewnętrzne 15px,
+            obramowanie o szerokości 2px linią kropkowaną koloru #1E9880;
+          </li>
+          <li>
+            tabela: marginesy zewnętrzne 20px, obramowanie o szerokości 1px
+            linią ciągłą, szerokość tabeli zajmuje 80% szerokości prawego
+            panelu;
+          </li>
+          <li>
+            wiersze tabeli: w momencie, gdy mysz znajduje się na wierszu,
+            powinien on przybrać zielony kolor tła i biały kolor czcionki;
+          </li>
+          <li>
+            nagłówki kolumn tabeli: kolor tła #1E9880, obramowanie o szerokości
+            1px linią ciągłą;&nbsp;
+          </li>
+          <li>
+            komórki kolumn: obramowanie o szerokości 1px linią ciągłą,
+            wyrównanie do prawej strony.
+          </li>
+        </ul>
+        <h4>
+          Skrypt
+        </h4>
+      </div>
+      <div>
+        Skrypt&nbsp;powinien zostać napisany w języku uruchamianym po stronie
+        przeglądarki. Skrypt jest uruchamiany po naciśnięciu przycisku
+        „Weryfikuj”.
+      </div>
+      <div>
+        Działanie skryptu:
+      </div>
+      <div>
+        <ul>
+          <li>pobiera hasło z pola tekstowego,</li>
+          <li>sprawdza warunki jakości hasła zapisane w tabeli 1,</li>
+          <li>
+            wypisuje w panelu prawym pod polem tekstowym treść:<br />&nbsp;–
+            „HASŁO JEST PUSTE” czcionką w kolorze czerwonym, jeżeli nic nie jest
+            wpisane w polu tekstowym;<br />&nbsp;– „HASŁOJESTSŁABE” czcionką
+            koloru żółtego, jeśli hasło spełnia warunki hasła słabego; – „HASŁO
+            JEST ŚREDNIE” czcionką koloru niebieskiego, jeśli hasło spełnia
+            warunki hasła średniego;<br />&nbsp;– „HASŁOJEST DOBRE” czcionką
+            koloru zielonego, jeśli hasło spełnia warunki hasła dobrego.
+          </li>
+        </ul>
+        Rysunek 3 przedstawia efekt działania skryptu. Wpisano hasło
+        „qwertyuiop4”, zgodnie z tabelą 1 jest ono dobre. Tekst HASŁOJEST DOBRE
+        w kolorze zielonym został wyświetlony przez skrypt. Należy zauważyć, że
+        rysunek 3 jest tylko <u>fragmentem</u> wyświetlanej strony.
+      </div>
+    </div>
+  </body>
+</html>
