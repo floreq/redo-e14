@@ -1,0 +1,199 @@
+<html>
+  <head>
+    <style>
+      html {
+        font-size: 18px;
+      }
+      li {
+        line-height: 1.5;
+      }
+      table,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>
+      Witryna internetowa
+    </h4>
+    Cechy witryny:<br />
+    <ul>
+      <li>
+        Strona główna o nazwie <i>index.html</i> oraz podstrony
+        <i>zamowienia.html</i> i <i>blog.html</i>
+        <ol>
+          <li>
+            W pliku <i>blog.html</i> należy umieścić jedynie tekst "Strona w
+            trakcie budowy"
+          </li>
+          <li>
+            Strona główna oraz podstrona zamówienia są identyczne, za wyjątkiem
+            panelu prawego
+          </li>
+        </ol>
+      </li>
+    </ul>
+    Cechy wspólne dla stron index.html i zamówienia.html:<br />
+    <ul>
+      <li>Zastosowany właściwy standard kodowanie polskich znaków</li>
+      <li>Tytuł strony widoczny na karcie przeglądarki "Hurtownia"</li>
+      <li>
+        Arkusz stylów w pliku o nazwie styl4.css prawidłowo podłączony z kodem
+        strony
+      </li>
+      <li>
+        Podział strony na bloki: na górze dwa bloki: logo i menu, poniżej baner,
+        poniżej dwa bloki: lewy i prawy oraz na dole stopka. Podział
+        zrealizowany za pomocą znaczków sekcji, zgodnie z obrazem 2
+      </li>
+      <li>
+        Zawartość bloku logo:
+        <ol>
+          <li>obraz <i>logo.png</i> z tekstem alternatywnym "hurtownia"</li>
+        </ol>
+      </li>
+      <li>
+        Zawartość bloku menu:
+        <ol>
+          <li>
+            Odnośnik "Strona główna", prowadzący do pliku <i>index.html</i>
+          </li>
+          <li>
+            Odnośnik "Zamówienia", prowadzący do pliku <i>zamowienia.html</i>
+          </li>
+          <li>Odnośnik "Blog o kawie", prowadzący do pliku <i>blog.html</i></li>
+          <li>
+            Odnośnik "Odwiedź także", prowadzący do strony
+            <i>htttp://gatunki-kawy.pl</i>, odnośnik otwiera się w osobnej
+            karcie przeglądarki
+          </li>
+        </ol>
+      </li>
+      <li>
+        Zawartość banera:
+        <ol>
+          <li>nagłówek pierwszego stopnia o treści "Hurtownia kawy"</li>
+        </ol>
+      </li>
+      <li>
+        Zawartość bloku lewego:
+        <ol>
+          <li>Nagłówek drugiego stopnia o treści: "Oferta"</li>
+          <li>
+            Lista numerowana (uporządkowana) o elementach: "Kawa palona
+            Arabica", "Kawa palona Robusta", "Kawa bezkofeinowa", "Kawa zielona"
+          </li>
+        </ol>
+      </li>
+      <li>
+        Zawartość stopki w postaci tekstu "Stronę przygotował:", dalej wstawiony
+        numer PESEL, numer PESEL jest zapisany czcionką pogrubioną.
+      </li>
+    </ul>
+    <b>Cechy bloku prawego dla strony index.html:</b><br />
+    <ul>
+      <li>Obraz <i>kawa</i> z tekstem alternatywnym: "Poczęstuj się"</li>
+    </ul>
+    <b>Cechy bloku prawego dla strony zamowienia.html:</b><br />
+    <ul>
+      <li>Napis "Podaj numer kawy:"</li>
+      <li>Poniżej pole edycyjne typu numerycznego</li>
+      <li>Poniżej napis "Podaj wagę w dekagramach"</li>
+      <li>Poniżej pole edycyjne typu numerycznego</li>
+      <li>
+        Poniżej przycisk o treści "Zamów", kliknięcie przycisku powoduje
+        wywołanie skryptu
+      </li>
+    </ul>
+    <h4>
+      Styl CSS witryny internetowej
+    </h4>
+    Plik styl4.css zawiera formatowanie:
+    <br />
+    <ul>
+      <li>Wspólne dla całej strony: krój czcionki Arial</li>
+      <li>
+        Dla bloku logo: kolor tła RGB 162,117,87; szerokość 20%, wysokość 100px
+      </li>
+      <li>
+        Dla bloku menu: kolor tła RGB 162,117,87;, szerokość 40%, wysokość
+        100px, wyrównanie tekstu do prawej strony
+      </li>
+      <li>
+        Wspólne dla banera i stopki: kolor tła RGB 74, 45, 32; biały kolor
+        czcionki, wyrównanie tekstu do środka, marginesy wewnętrzne 30px
+      </li>
+      <li>
+        Wspólne dla bloku lewego i prawego: kolor tła RGB 162,117,87; biały
+        kolor czcionki, szerokość 50%, wysokość 500px
+      </li>
+      <li>
+        Dla selektora nagłówkowego pierwszego stopnia: odległość między literami
+        10px
+      </li>
+      <li>
+        Dla selektora odnośnika: kolor czcionki RGB 65, 98, 85; marginesy
+        wewnętrzne 20px, marginesy zewnętrzne 10px, rozmiar czcionki 150%,
+        wysokość linii 100px, obramowanie 1px, linią ciągłą o kolorze RGB 65,
+        98, 85;
+      </li>
+      <li>
+        Dla elementu nr 4 ("Kawa zielona") listy umieszczonej w bloku lewym:
+        tekst przekreślony
+      </li>
+    </ul>
+    <h4>
+      Skrypt
+    </h4>
+    Wymagania dotyczące skryptu:
+    <br />
+    <ul>
+      <li>Wykonany po stronie przeglądarki</li>
+      <li>
+        Wywołany na stronie <i>zamownienia.html</i> po kliknięciu przycisku
+        "Zamów"
+      </li>
+      <li>
+        Skrypt pobiera wartości wpisane w oba pola edycyjne i oblicza kosz kawy
+        uwzględniając jej numer i wagę
+      </li>
+      <li>
+        Ceny kawy ze względu na jej numer przedstawia tabela 1, w przypadku
+        wpisania innej wartości niż 1-3 cena wynosi 0 zł
+      </li>
+      <li>
+        Po obliczeniu całkowitego kosztu kawy jest wyświetlany wynik pod
+        przyciskiem w formacie: "Koszt zamówienia wynosi [koszt] zł", gdzie
+        [koszt] oznacza obliczony koszt.
+      </li>
+    </ul>
+    <table>
+      <caption>
+        Tabela 1. Ceny kawy
+      </caption>
+      <tbody>
+        <tr>
+          <td>Numer kawy</td>
+          <td>Nazwa</td>
+          <td>Cena za 1 dekagram</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Kawa palona Arabica</td>
+          <td>5 zł</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Kawa palona Robusta</td>
+          <td>7 zł</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Kawa bezkofeinowa</td>
+          <td>6 zł</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
