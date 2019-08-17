@@ -116,7 +116,7 @@ section div {
   position: absolute;
   top: 48px;
   right: 0;
-  margin-right: -25%;
+  margin-right: calc(-25% - 24px);
   padding: 0;
   width: 2px;
   height: 50%;
