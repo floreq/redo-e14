@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Przykłady</a></li>
+        <li><a href="index.html">Tworzenie</a></li>
+        <li><a href="index.html">Zobacz również</a></li>
+      </ul>
+    </nav>
+    <hr />
+    <main>
+      <section>
+        <div class="column-title">
+          <h4>Przykład 1</h4>
+          <h1>Lista</h1>
+        </div>
+        <div class="column-content">
+          <ul>
+            <li>Muzyka</li>
+            <li>
+              Turystyka
+              <ol>
+                <li>Góry</li>
+                <li>Jeziora</li>
+                <li>Na rowerze</li>
+              </ol>
+            </li>
+            <li>Książki</li>
+          </ul>
+        </div>
+        <div class="column-title">
+          <h4>Przykład 2</h4>
+          <h1>Tabela</h1>
+        </div>
+        <div class="column-content">
+          <table>
+            <thead>
+              <tr>
+                <th>Pora dnia</th>
+                <th>Obowiązki</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>rano</td>
+                <td>nauka</td>
+              </tr>
+              <tr>
+                <td>południe</td>
+                <td>zajęcia dodatkowe</td>
+              </tr>
+              <tr>
+                <td>popołudnie</td>
+                <td rowspan="2">moje hobby</td>
+              </tr>
+              <tr>
+                <td>wieczór</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <div class="column-title">
+          <h4>Formatowanie</h4>
+          <h1>Tworzenie</h1>
+        </div>
+        <div class="column-content">
+          <h4>Podaj rozmiar czciąki</h4>
+          <input
+            type="text"
+            style="max-width: 60px; text-align: right"
+            value="178"
+            name="fontSize"
+          />
+          <span style="margin-left: 8px">%</span>
+          <h4>Styl czciąki</h4>
+          <select name="fontStyle">
+            <option value="bold">pogrubiony</option>
+            <option value="normal">normalny</option>
+            <option value="italic">pochylony</option>
+          </select>
+          <h4>Kolor czciąki</h4>
+          <span style="margin-right: 8px">#</span>
+          <input
+            type="text"
+            style="max-width: 60px"
+            value="373e48"
+            name="color"
+          />
+        </div>
+        <div class="column-content">
+          <h4>Wprowadź tekst</h4>
+          <input
+            type="text"
+            style="width: 70%"
+            value="Wprowadź swój teskt tutaj..."
+            name="insertedText"
+          />
+          <p>Wprowadź swój teskt tutaj...</p>
+        </div>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      © 2019 floreq
+      <script src="./script.js"></script>
+    </footer>
+  </body>
+</html>
