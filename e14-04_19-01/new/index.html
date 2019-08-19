@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hurtownia Morank</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <nav>
+          <ul>
+            <li><a href="">Oferta</a></li>
+            <li><a href="">Zamówienia</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="title">
+          <div>
+            <h1>Hurtownia</h1>
+          </div>
+          <div>
+            <h1>Morank</h1>
+            <img src="./cafe-icon.svg" alt="cafe-icon" />
+            <h3>łączy nas kawa</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <section>
+          <h4>oferta</h4>
+          <div class="table-container">
+            <img src="./cafe-icon.svg" alt="cafe-icon" style="width: 40px" />
+            <h2 class="table-title">Kawa palona</h2>
+            <div class="table-desc">za 1 dag</div>
+            <div class="table-l">
+              <div>Arabica</div>
+              <div>Arabusta</div>
+              <div>Liberica</div>
+              <div>Robusta</div>
+              <div>Stenophylla</div>
+              <div></div>
+            </div>
+            <div class="table-r">
+              <div>4 zł</div>
+              <div>7 zł</div>
+              <div>8 zł</div>
+              <div>5 zł</div>
+              <div>13 zł</div>
+              <div></div>
+            </div>
+            <img src="./cafe-mill.svg" alt="cafe-icon" style="width: 36px" />
+            <h2 class="table-title">Kawa mielona</h2>
+            <div class="table-desc">za 1 dag</div>
+            <div class="table-l">
+              <div>Arabusta</div>
+              <div>Excelsa</div>
+              <div>Liberica</div>
+              <div></div>
+            </div>
+            <div class="table-r">
+              <div>5 zł</div>
+              <div>11 zł</div>
+              <div>3 zł</div>
+              <div></div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h4>kalkulator</h4>
+          <div>
+            <h5>Rodzaj kawy</h5>
+            <label>
+              <input
+                type="radio"
+                name="cafeType"
+                value="palona"
+                checked="checked"
+              />
+              <span class="radioText">palona</span>
+            </label>
+            <label>
+              <input type="radio" name="cafeType" value="mielona" />
+              <span class="radioText">mielona</span>
+            </label>
+            <label>
+              <h5>Typ kawy</h5>
+              <select>
+                <option value="Arabica">Arabica</option>
+                <option value="Arabusta">Arabusta</option>
+                <option value="Liberica">Liberica</option>
+                <option value="Robusta">Robusta</option>
+                <option value="Stenophylla">Stenophylla</option>
+              </select>
+            </label>
+            <label>
+              <h5>Ilość</h5>
+              <input type="text" value="0" /><span>dag</span>
+            </label>
+            <h5>Koszt</h5>
+            <p>0</p>
+            <span>zł</span>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="content">© 2019 floreq</div>
+      <script src="./script.js"></script>
+    </footer>
+  </body>
+</html>

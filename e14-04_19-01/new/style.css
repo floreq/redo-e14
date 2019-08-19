@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(./fonts/PTS55F.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(./fonts/PTS75F.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url(./fonts/PTF55F.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url(./fonts/PTF75F.ttf);
+  font-weight: bold;
+}
+
+html,
+select,
+input {
+  font-family: "PT Sans";
+  font-size: 18px;
+  color: #1c2224;
+}
+
+body {
+  margin: 0;
+}
+
+.content {
+  margin: auto;
+  max-width: 1600px;
+}
+
+header,
+main,
+footer {
+  padding: 48px;
+}
+
+header {
+  background: linear-gradient(90deg, #e5a276 50%, #faf4f0 50%);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 24px;
+  padding-left: 9px;
+  padding-bottom: 9px;
+  border-left: 2px solid white;
+}
+
+a {
+  font-family: "PT Serif";
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1c2224;
+}
+
+nav,
+.title,
+main .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.title {
+  margin: 48px 0;
+}
+
+.title div:first-child {
+  padding-right: 9px;
+  text-align: right;
+}
+
+.title div:last-child {
+  padding-left: 9px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  line-height: 1;
+  font-size: 48px;
+}
+
+.title div:last-child h1 {
+  float: left;
+}
+.title div:last-child h3 {
+  clear: both;
+}
+
+.title img {
+  padding-left: 24px;
+  width: 66px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
+}
+
+h4 {
+  display: inline;
+  border-bottom: 2px solid #1c2224;
+  font-family: "PT Serif";
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h5 {
+  margin-top: 48px;
+  margin-bottom: 18px;
+  font-family: "PT Sans";
+  font-size: 16px;
+  font-weight: normal;
+}
+
+main {
+  background: linear-gradient(90deg, #faf4f0 50%, #fff 50%);
+}
+
+section:nth-child(odd) {
+  padding-right: 48px;
+}
+
+section:nth-child(even) {
+  padding-left: 48px;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+}
+
+.table-container img {
+  width: 36px;
+  grid-column: 1;
+  margin-top: 48px;
+  margin-right: 18px;
+}
+
+.table-container h2 {
+  align-self: end;
+  margin-top: 48px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+}
+
+.table-container .table-desc {
+  align-self: end;
+  margin-top: 48px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  border-left: 2px solid #e5a276;
+  color: #e5a276;
+}
+
+.table-l {
+  grid-column: 2;
+  text-align: right;
+}
+
+.table-r {
+  grid-column: 3;
+}
+
+.table-container .table-r div {
+  padding-left: 18px;
+  padding-top: 18px;
+  border-left: 2px solid #e5a276;
+}
+
+.table-container .table-l div {
+  padding-right: 18px;
+  padding-top: 18px;
+}
+
+/* Pierszy wiersz */
+.table-container .table-l div:first-child,
+.table-container .table-r div:first-child {
+  border-top: 2px solid #e5a276;
+}
+
+/* Przedostatni wiersz */
+.table-container .table-l div:nth-last-child(2),
+.table-container .table-r div:nth-last-child(2) {
+  padding-bottom: 18px;
+}
+
+/* Ostatni wiersz */
+.table-container .table-l div:last-child,
+.table-container .table-r div:last-child {
+  border-top: 2px solid #e5a276;
+}
+
+label {
+  margin-right: -5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input:checked ~ .radioText {
+  border: 2px solid #e5a276;
+  color: #e5a276;
+}
+
+.radioText,
+input,
+select,
+p {
+  display: inline-block;
+  margin-right: 9px;
+  padding: 9px;
+  border: 2px solid #1c2224;
+}
+
+input:focus,
+select:focus {
+  border: 2px solid #e5a276; /* oranges! yey */
+}
+
+select {
+  padding-right: 37px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("./select-arrow.svg") no-repeat 96% 0;
+  background-position-x: calc(100% - 9px);
+  background-position-y: center;
+}
+
+input {
+  max-width: 100px;
+  text-align: right;
+}
+
+p {
+  margin-top: 0;
+  min-width: 100px;
+  text-align: right;
+}
+
+footer {
+  background: linear-gradient(90deg, #fff 50%, #e5a276 50%);
+}
