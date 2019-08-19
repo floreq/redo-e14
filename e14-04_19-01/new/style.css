@@ -125,6 +125,10 @@ h2 {
   line-height: 1;
 }
 
+h3 {
+  font-family: "PT Serif";
+}
+
 h4 {
   display: inline;
   border-bottom: 2px solid #1c2224;
