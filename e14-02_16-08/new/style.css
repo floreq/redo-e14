@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(./fonts/PTS55F.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url(./fonts/PTS75F.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("./fonts/PTS56F.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("./fonts/PTS76F.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+html,
+input,
+button {
+  font-family: "PT Sans";
+  font-size: 18px;
+  color: #373e48;
+}
+
+body {
+  max-width: 1600px;
+  display: grid;
+  margin: auto;
+  padding: 48px;
+  grid-template-columns: 35% auto;
+  grid-gap: 48px;
+  counter-reset: li;
+}
+
+aside,
+main,
+footer {
+  padding: 48px;
+  border: 2px solid #eaecef;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #b7bec8;
+  line-height: 1.6;
+}
+
+h3 {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  padding-right: 24px;
+  border-bottom: 2px solid #eaecef;
+  font-size: 18px;
+  font-weight: normal;
+  color: #b7bec8;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+}
+
+ol > li {
+  counter-increment: li;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 2px solid #eaecef;
+}
+
+ol > li::before {
+  content: counter(li);
+  display: block;
+  margin-bottom: 18px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+ul {
+  margin-top: 48px;
+  padding-left: 48px;
+  list-style-type: disc;
+  color: #dbdee3;
+  line-height: 1;
+}
+
+ul span {
+  margin-left: -24px;
+}
+
+ul li {
+  margin-top: 24px;
+  margin-left: 20px;
+  color: #b7bec8;
+}
+
+form {
+  margin-bottom: 96px;
+}
+
+input {
+  padding: 9px;
+  border: 2px solid #eaecef;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.show {
+  font-size: 15px;
+  color: #eaecef;
+}
+
+button {
+  padding: 11px;
+  background-color: #37d8a9;
+  border: unset;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
