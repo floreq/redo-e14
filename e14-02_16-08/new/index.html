@@ -13,13 +13,14 @@
         <h3>Wskazówki</h3>
         <ol>
           <li>
-            Donec dapibus ligula nisi, a dapibus orci fringilla id. Mauris in
-            libero elementum nulla porttitor varius eu ac est.<br />
-            Maecenas quis porta neque. Cras ut orci velit. Aenean dapibus.
+            Hasła nie są idealnym zabezpieczeniem, nie są także wieczne.<br />
+            Hasło, które używasz już kilka lat mogło zostać skompromitowene.<br />
+            Staraj się więc modyfikować swoje hasła z czasem. Umieszczaj w nich,
+            np. rok utworzenia aby pamiętac jak długo je używasz.
             <ul>
               <span>Przykłady:</span>
-              <li>aenean dapibus,</li>
-              <li>quis porta neque.</li>
+              <li>Mak@ronjestWalc3m<span class="current-year">2019</span>,</li>
+              <li>W<span class="current-year">2019</span>JeżzjadłSłońcE</li>
             </ul>
           </li>
           <li>
@@ -37,7 +38,7 @@
       </section>
     </aside>
     <main>
-      <h1>Sprawdź strukturę swoje hasła*</h1>
+      <h1>Sprawdź strukturę swojego hasła*</h1>
       <h2>
         *nigdy nie podawaj swojego hasła takim stroną jak ta.<br />
         Hasła nie są po to aby się nimi dzielić.
@@ -49,14 +50,149 @@
         </label>
         <button>Sprawdź</button>
       </form>
-      <h1>Wykres twoich haseł</h1>
+      <h1>Wykres wprowadzonych haseł</h1>
       <h2>
         Nie istnieje idealne hasło. Każde można złamać,<br />
         ale ostatecznie jakim kosztem?
       </h2>
+      <div class="chart">
+        <svg
+          preserveAspectRatio="xMinYMin meet"
+          width="100%"
+          height="335.04401"
+          viewBox="0 0 38.776803 88.647065"
+        >
+          <g class="x-label"></g>
+          <g class="y-label">
+            <text>
+              <tspan y="81.686447" x="2.4612427">
+                0
+              </tspan>
+            </text>
+            <text>
+              <tspan y="55.725529" x="2.725826">
+                5
+              </tspan>
+            </text>
+            <text>
+              <tspan y="29.828115" x="-0.42230248">
+                10
+              </tspan>
+            </text>
+            <text>
+              <tspan y="3.8989491" x="-0.15771914">
+                15
+              </tspan>
+            </text>
+          </g>
+          <!-- <g class="biggest-height">
+            <text x="-0.20005247" y="13.533755">
+              <tspan x="-0.20005247" y="13.533755">
+                22
+              </tspan>
+            </text>
+            <path d="m 9.88017,11.649922 h 28.6284" />
+          </g> -->
+          <g class="chart-grid">
+            <path d="m 9.88016,2.0468657 h 1000" />
+            <path d="m 9.88016,27.976032 h 1000" />
+            <path d="m 9.88016,53.905197 h 1000" />
+            <path d="m 9.88016,79.834364 h 1000" />
+          </g>
+          <g class="chart-bars">
+            <g>
+              <rect
+                class="numbers"
+                rx="0.62"
+                ry="0.62"
+                y="11.872241"
+                x="22.581184"
+                height="10.939931"
+                width="5.7665434"
+              />
+              <rect
+                class="letters"
+                rx="0.62"
+                ry="0.62"
+                width="5.7665434"
+                height="28.697149"
+                x="22.581184"
+                y="23.885128"
+              />
+              <rect
+                class="characters"
+                rx="0.62"
+                ry="0.62"
+                width="5.7665434"
+                height="26.123129"
+                x="22.581184"
+                y="53.640617"
+              />
+            </g>
+          </g>
+          <g>
+            <rect
+              class="numbers"
+              rx="0.62"
+              ry="0.62"
+              y="11.872241"
+              x="48.581184"
+              height="10.939931"
+              width="5.7665434"
+            />
+            <rect
+              class="letters"
+              rx="0.62"
+              ry="0.62"
+              width="5.7665434"
+              height="28.697149"
+              x="48.581184"
+              y="23.885128"
+            />
+            <rect
+              class="characters"
+              rx="0.62"
+              ry="0.62"
+              width="5.7665434"
+              height="26.123129"
+              x="48.581184"
+              y="53.640617"
+            />
+          </g>
+        </svg>
+        <div class="legend">
+          <h3>Legenda</h3>
+          <div class="lable-wrapper">
+            <div class="lable numbers"></div>
+            <div>
+              <h4>Cyfry</h4>
+              <span>np. 123</span>
+            </div>
+          </div>
+          <div class="lable-wrapper">
+            <div class="lable letters"></div>
+            <div>
+              <h4>Litery</h4>
+              <span>np. aBc</span>
+            </div>
+          </div>
+          <div class="lable-wrapper">
+            <div class="lable characters"></div>
+            <div>
+              <h4>Znaki</h4>
+              <span>np. &!<</span>
+            </div>
+          </div>
+          <div class="lable-wrapper">
+            <hr />
+          </div>
+          <button>Wyczyść</button>
+        </div>
+      </div>
     </main>
     <footer>
       © 2019 floreq
+      <script src="./script.js"></script>
     </footer>
   </body>
 </html>
