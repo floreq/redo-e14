@@ -8,6 +8,19 @@ form.addEventListener("submit", e => {
   addBar();
 });
 
+// Funkcjonalnosc przycisku w legendzie
+// Wyczyszczenie wykresu
+const clearChart = document.querySelector(".legend button");
+clearChart.addEventListener("click", () => {
+  const xLabels = document.querySelector("#x-label");
+  const chartBars = document.querySelector("#chart-bars");
+  // Usuniecie etykiet i slupkow
+  while (xLabels.lastChild || chartBars.lastChild) {
+    xLabels.lastChild ? xLabels.removeChild(xLabels.lastChild) : null;
+    chartBars.lastChild ? chartBars.removeChild(chartBars.lastChild) : null;
+  }
+});
+
 // Aktualizacja szerokosci chartGrid zaleznie od szerokosci okna
 function changeChartGridWidth() {
   const maxChartWidth = document.querySelector(".chart").clientWidth;
@@ -22,12 +35,12 @@ function changeChartGridWidth() {
 window.onresize = changeChartGridWidth; // Uruchomienie funkcji w czasie zmiany szerokosci okna
 
 function stringStructure(input) {
-  console.log(input.value);
+  //console.log(input.value);
 }
 
 function addBar() {
-  const xLabels = document.querySelectorAll(".x-label text");
-  const xLabelComponent = document.querySelector(".x-label");
+  const xLabels = document.querySelectorAll("#x-label text");
+  const xLabelComponent = document.querySelector("#x-label");
 
   // Do tworzenia elementow svg nalezy uzywac "createElementNS", createElement nie zadziala
   const createText = document.createElementNS(
@@ -45,11 +58,18 @@ function addBar() {
   createText.setAttribute("x", 24.009666);
   xLabelComponent.insertBefore(createText, xLabelComponent.firstChild);
 
-  // Zrobienie miejsca dla nowego text
+  // Przesuniecie starych text
   for (let i = 0; i < xLabels.length; i++) {
     const x = parseFloat(xLabels[i].getAttribute("x"));
     xLabels[i].setAttribute("x", x + 26);
   }
+
+  // const chartBars = document.querySelectorAll("#chart-bars g");
+  // const chartBarsComponent = document.querySelector("#chart-bars");
+
+  // const createG = document.createElementNS("http://www.w3.org/2000/svg", "g");
+
+  // console.log(chartBars[0].querySelectorAll("rect"));
 }
 
 // Dodanie aktualnego roku w miejscu uzytej klasy "current-year"
@@ -59,5 +79,4 @@ function addCurrentYear() {
     addCurrentYear[i].textContent = new Date().getFullYear();
   }
 }
-
 addCurrentYear();
