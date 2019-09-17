@@ -102,6 +102,7 @@ ol {
 
 ol > li {
   counter-increment: li;
+  display: inline-block;
   margin-bottom: 48px;
   padding-bottom: 48px;
   border-bottom: 2px solid #eaecef;
@@ -146,6 +147,10 @@ form {
   margin-bottom: 96px;
 }
 
+label {
+  position: relative;
+}
+
 input {
   padding: 9px;
   width: calc(100% - 22px);
@@ -154,9 +159,13 @@ input {
   font-size: 18px;
 }
 
-.show {
-  font-size: 15px;
-  color: #eaecef;
+#show {
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  right: 11px;
+  font-size: 16px;
+  color: #eaeaea;
 }
 
 button {

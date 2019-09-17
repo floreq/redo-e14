@@ -4,8 +4,26 @@ form.addEventListener("submit", e => {
   e.preventDefault(); // Zapobiera odswiezaniu sie strony po form submit
 
   const input = document.querySelector("input");
-  stringStructure(input);
+  console.log(inputStructure(input));
   addBar();
+});
+
+// Funkcjonalnosc przycisku pokarz/ukryj
+const show = document.querySelector("#show");
+show.addEventListener("click", e => {
+  const input = document.querySelector("input");
+  const tag = e.target;
+  const dataShow = tag.dataset.show; // Atrybuty znacznika, ktore maja w nazwie data-, np. data-show
+  // Atrybuty znacznikow nie przechowuja boolean dla tego false jest zapisane "false"
+  if (dataShow === "false" || dataShow === undefined) {
+    tag.textContent = "ukryj";
+    tag.dataset.show = true;
+    input.type = "text";
+  } else {
+    tag.textContent = "pokarz";
+    tag.dataset.show = false;
+    input.type = "password";
+  }
 });
 
 // Funkcjonalnosc przycisku w legendzie
@@ -34,8 +52,13 @@ function changeChartGridWidth() {
 }
 window.onresize = changeChartGridWidth; // Uruchomienie funkcji w czasie zmiany szerokosci okna
 
-function stringStructure(input) {
-  //console.log(input.value);
+function inputStructure(input) {
+  const v = input.value;
+  const digits = v.replace(/[^0-9]/g, "").length; // ^ - wybiera przeciwienstow, np. [^0-9] z "12abc" zwroci abc
+  const letters = v.replace(/[^a-ząćęłńóśźż]/gi, "").length; // g- find all matches, i - case insensitive
+  const rest = v.length - (digits + letters);
+
+  return { numOfDigits: digits, numOfLetters: letters, numOfRest: rest };
 }
 
 function addBar() {
