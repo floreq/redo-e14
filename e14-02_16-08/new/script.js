@@ -1,12 +1,28 @@
+let highestLength = 15;
+
 // Funkcjonalnosc przycisku w formularzu
 const form = document.querySelector("form");
 form.addEventListener("submit", e => {
   e.preventDefault(); // Zapobiera odswiezaniu sie strony po form submit
 
   const input = document.querySelector("input");
-  console.log(inputStructure(input));
+  highestLength =
+    input.value.length > highestLength ? input.value.length : highestLength;
   addBar();
+  updateYLabels();
+  // console.log(highestLength);
 });
+
+function updateYLabels() {
+  const yLabels = document.querySelectorAll("#y-label text tspan");
+  const y =
+    highestLength % 3 === 0
+      ? Math.floor(highestLength / 3)
+      : Math.floor(highestLength / 3) + 1;
+  for (let i = 0; i < yLabels.length; i++) {
+    yLabels[i].textContent = y * i;
+  }
+}
 
 // Funkcjonalnosc przycisku pokarz/ukryj
 const show = document.querySelector("#show");
