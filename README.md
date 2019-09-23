@@ -12,9 +12,9 @@ Z góry chciałbym zaznaczyć, że moim celem nie jest wykonanie egzaminu w stu 
 
 Przerobione przeze mnie strony można zobaczyć [tutaj](https://floreq.github.io/redo-e14/)
 
-### e14-02_16-08
-### e14-02_19-01
-### e14-04_19-01
+### [e14-02_16-08](https://floreq.github.io/redo-e14/e14-02_16-08/new/index.html)
+### [e14-02_19-01](https://floreq.github.io/redo-e14/e14-02_19-01/new/index.html)
+### [e14-04_19-01](https://floreq.github.io/redo-e14/e14-04_19-01/new/index.html)
 
 ## Autor
 
