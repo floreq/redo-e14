@@ -10,7 +10,7 @@ Z góry chciałbym zaznaczyć, że moim celem nie jest wykonanie egzaminu w stu 
 
 ## Wykonane egzaminy
 
-Przerobione przeze mnie strony można zobaczyć [tutaj](https://floreq.github.io/redo-e14/)
+Listę przerobionych przeze mnie strony można zobaczyć również [tutaj](https://floreq.github.io/redo-e14/).
 
 ### [e14-02_16-08](https://floreq.github.io/redo-e14/e14-02_16-08/new/index.html)
 ### [e14-02_19-01](https://floreq.github.io/redo-e14/e14-02_19-01/new/index.html)
