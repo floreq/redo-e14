@@ -18,7 +18,7 @@ Listę przerobionych przeze mnie strony można zobaczyć również [tutaj](https
 
 ## Autor
 
-- [Floreq](https://github.com/floreq)
+- Piotr Florczak ([Floreq](https://github.com/floreq))
 
 ## Licencje
 
