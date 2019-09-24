@@ -12,9 +12,19 @@ Z góry chciałbym zaznaczyć, że moim celem nie jest wykonanie egzaminu w stu 
 
 Listę przerobionych przeze mnie strony można zobaczyć również [tutaj](https://floreq.github.io/redo-e14/).
 
-### [e14-02_16-08](https://floreq.github.io/redo-e14/e14-02_16-08/new/index.html)
 ### [e14-02_19-01](https://floreq.github.io/redo-e14/e14-02_19-01/new/index.html)
+
+| Przed  | Po |
+| ------------- | ------------- |
+| ![e14-02_19-01](/e14-02_19-01/documentation/e14-02_19-01.png)  | ![page-screenshot](/e14-02_19-01/documentation/page-screenshot.png)  |
+
 ### [e14-04_19-01](https://floreq.github.io/redo-e14/e14-04_19-01/new/index.html)
+
+| Przed  | Po |
+| ------------- | ------------- |
+| ![e14-04_19-01](/e14-04_19-01/documentation/e14-04_19-01.png)  | ![page-screenshot](/e14-04_19-01/documentation/page-screenshot.png)  |
+
+### [e14-02_16-08](https://floreq.github.io/redo-e14/e14-02_16-08/new/index.html)
 
 ## Autor
 
