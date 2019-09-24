@@ -1,4 +1,6 @@
 let highestLength = 15;
+let highestYLable = 15;
+const gridHeight = 2.0468657;
 
 // Funkcjonalnosc przycisku w formularzu
 const form = document.querySelector("form");
@@ -8,9 +10,8 @@ form.addEventListener("submit", e => {
   const input = document.querySelector("input");
   highestLength =
     input.value.length > highestLength ? input.value.length : highestLength;
-  addBar();
+  addXLabels();
   updateYLabels();
-  // console.log(highestLength);
 });
 
 function updateYLabels() {
@@ -19,6 +20,7 @@ function updateYLabels() {
     highestLength % 3 === 0
       ? Math.floor(highestLength / 3)
       : Math.floor(highestLength / 3) + 1;
+  highestYLable = y * (yLabels.length - 1); // Aktualizacja maksymalnego yLabels
   for (let i = 0; i < yLabels.length; i++) {
     yLabels[i].textContent = y * i;
   }
@@ -77,10 +79,9 @@ function inputStructure(input) {
   return { numOfDigits: digits, numOfLetters: letters, numOfRest: rest };
 }
 
-function addBar() {
+function addXLabels() {
   const xLabels = document.querySelectorAll("#x-label text");
   const xLabelComponent = document.querySelector("#x-label");
-
   // Do tworzenia elementow svg nalezy uzywac "createElementNS", createElement nie zadziala
   const createText = document.createElementNS(
     "http://www.w3.org/2000/svg",
@@ -96,20 +97,32 @@ function addBar() {
   createText.setAttribute("y", 88.647018);
   createText.setAttribute("x", 24.009666);
   xLabelComponent.insertBefore(createText, xLabelComponent.firstChild);
-
   // Przesuniecie starych text
   for (let i = 0; i < xLabels.length; i++) {
     const x = parseFloat(xLabels[i].getAttribute("x"));
     xLabels[i].setAttribute("x", x + 26);
   }
-
-  // const chartBars = document.querySelectorAll("#chart-bars g");
-  // const chartBarsComponent = document.querySelector("#chart-bars");
-
-  // const createG = document.createElementNS("http://www.w3.org/2000/svg", "g");
-
-  // console.log(chartBars[0].querySelectorAll("rect"));
 }
+
+function addBar(inputStructure) {
+  const chartBars = document.querySelector("#chart-bars");
+  const createG = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  const chartVariables = { numOfDigits: { className: "numbers" } };
+
+  Object.keys(inputStructure).forEach(e => {
+    const createRect = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "rect"
+    );
+    createRect.setAttribute("x", inputStructure[e]);
+    createRect.setAttribute("x", inputStructure[e]);
+    createG.appendChild(createRect);
+  });
+  chartBars.appendChild(createG);
+  console.log(chartBars);
+}
+
+addBar({ numOfDigits: 5, numOfLetters: 6, numOfRest: 3 });
 
 // Dodanie aktualnego roku w miejscu uzytej klasy "current-year"
 function addCurrentYear() {
