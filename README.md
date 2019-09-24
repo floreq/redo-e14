@@ -1,6 +1,6 @@
 # [Redo E14](https://floreq.github.io/redo-e14/)
 
-Ten projekt to jest nic innego jak przepracowanie archwalnych stron z [egzaminu technicznego E14 z inforamtyki](https://cke.gov.pl/egzamin-zawodowy/egzamin-w-nowej-formule/strona-o-egzaminie/) i próba przerobienia ich na bardziej przyjazne oku. Nie odkrywam w ten sposób Ameryki, ale chciałem mieć po prostu ciekawe wyzwanie.
+Ten projekt to jest nic innego jak przepracowanie archwalnych stron z [egzaminu technicznego E14 z inforamtyki](https://cke.gov.pl/egzamin-zawodowy/egzamin-w-nowej-formule/strona-o-egzaminie/). Oraz próba przerobienia ich na bardziej przyjazne oku. Nie odkrywam w ten sposób Ameryki, ale chciałem mieć po prostu ciekawe wyzwanie.
 
 ## Wprowadzenie
 
