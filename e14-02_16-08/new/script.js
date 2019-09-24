@@ -1,6 +1,6 @@
 let highestLength = 15;
 let highestYLable = 15;
-const gridHeight = 2.0468657;
+const gridMaxHeight = 77.981468;
 
 // Funkcjonalnosc przycisku w formularzu
 const form = document.querySelector("form");
@@ -79,6 +79,7 @@ function inputStructure(input) {
   return { numOfDigits: digits, numOfLetters: letters, numOfRest: rest };
 }
 
+// Dodanie xLable i przesuniecie poprzednich etykiet
 function addXLabels() {
   const xLabels = document.querySelectorAll("#x-label text");
   const xLabelComponent = document.querySelector("#x-label");
@@ -107,22 +108,45 @@ function addXLabels() {
 function addBar(inputStructure) {
   const chartBars = document.querySelector("#chart-bars");
   const createG = document.createElementNS("http://www.w3.org/2000/svg", "g");
-  const chartVariables = { numOfDigits: { className: "numbers" } };
+  const chartVariables = {
+    numOfDigits: { className: "numbers" },
+    numOfLetters: { className: "letters" },
+    numOfRest: { className: "characters" }
+  };
 
   Object.keys(inputStructure).forEach(e => {
     const createRect = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "rect"
     );
-    createRect.setAttribute("x", inputStructure[e]);
-    createRect.setAttribute("x", inputStructure[e]);
+    createRect.setAttribute("class", chartVariables[e].className);
+    createRect.setAttribute("rx", 0.62);
+    createRect.setAttribute("ry", 0.62);
+    createRect.setAttribute("width", 5.7665434);
+    createRect.setAttribute(
+      "height",
+      (gridMaxHeight / highestYLable) * inputStructure[e]
+    );
+    createRect.setAttribute("x", 22.581184);
+    createRect.setAttribute(
+      "y",
+      (80.834364 *
+        (100 - (100 * ((inputStructure[e] * 100) / highestYLable)) / 100)) /
+        100
+    );
+    // 79.834364 - 0% 53.7822789 - 33%, 1.7822789 - 100%
     createG.appendChild(createRect);
+    console.log((gridMaxHeight / highestYLable) * inputStructure[e]);
+    console.log(
+      Math.round(
+        100 - (100 * ((inputStructure[e] * 100) / highestYLable)) / 100
+      )
+    );
   });
   chartBars.appendChild(createG);
-  console.log(chartBars);
 }
 
-addBar({ numOfDigits: 5, numOfLetters: 6, numOfRest: 3 });
+addBar({ numOfRest: 5, numOfLetters: 5, numOfDigits: 10 });
 
 // Dodanie aktualnego roku w miejscu uzytej klasy "current-year"
 function addCurrentYear() {
