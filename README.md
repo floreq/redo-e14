@@ -29,7 +29,7 @@ Listę przerobionych przeze mnie strony można zobaczyć również [tutaj](https
 
 | Przed  | Po |
 | ------------- | ------------- |
-|   | ![page-screenshot](e14-02_16-08/documentation/page-screenshot.png)  |
+| ![e14-02_16-08](e14-02_16-08/documentation/e14-02_16-08.jpg)  | ![page-screenshot](e14-02_16-08/documentation/page-screenshot.png)  |
 
 ## Autor
 
