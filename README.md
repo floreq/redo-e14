@@ -26,6 +26,11 @@ Listę przerobionych przeze mnie strony można zobaczyć również [tutaj](https
 
 ### [e14-02_16-08](https://floreq.github.io/redo-e14/e14-02_16-08/new/index.html)
 
+
+| Przed  | Po |
+| ------------- | ------------- |
+|   | ![page-screenshot](e14-02_16-08/documentation/page-screenshot.png)  |
+
 ## Autor
 
 - Piotr Florczak ([Floreq](https://github.com/floreq))
