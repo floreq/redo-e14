@@ -10,8 +10,10 @@ form.addEventListener("submit", e => {
   const input = document.querySelector("input");
   highestLength =
     input.value.length > highestLength ? input.value.length : highestLength;
-  addXLabels();
+
   updateYLabels();
+  addXLabels();
+  addBar(inputStructure(input));
 });
 
 function updateYLabels() {
@@ -76,7 +78,7 @@ function inputStructure(input) {
   const letters = v.replace(/[^a-ząćęłńóśźż]/gi, "").length; // g- find all matches, i - case insensitive
   const rest = v.length - (digits + letters);
 
-  return { numOfDigits: digits, numOfLetters: letters, numOfRest: rest };
+  return { numOfRest: rest, numOfLetters: letters, numOfDigits: digits };
 }
 
 // Dodanie xLable i przesuniecie poprzednich etykiet
@@ -104,7 +106,7 @@ function addXLabels() {
     xLabels[i].setAttribute("x", x + 26);
   }
 }
-
+// Dodane slupka wykresu
 function addBar(inputStructure) {
   const chartBars = document.querySelector("#chart-bars");
   const createG = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -113,8 +115,14 @@ function addBar(inputStructure) {
     numOfLetters: { className: "letters" },
     numOfRest: { className: "characters" }
   };
-
+  // yStartingPoint to jest punkt, od ktorek jest rysowany slupek (z gory do dolu!)
+  // 79.834364 - 0% 53.7822789 - 33%, 1.7822789 - 100%
+  let yStartingPoint = 79.834364;
+  let separation = 0; // Pierwszy odstep jest rowny 0, pozniej 1.1
   Object.keys(inputStructure).forEach(e => {
+    numOf = inputStructure[e]; // Ilosc, np. wartosc numOfLetters
+    smallBarHeight = (gridMaxHeight / highestYLable) * numOf; // Wyliczenie jaka powinien miec maly slupek wysokosc
+    yStartingPoint -= smallBarHeight; // Dostosowanie poczatkowego punktu w odniesieniu do wysokosci
     const createRect = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "rect"
@@ -125,28 +133,17 @@ function addBar(inputStructure) {
     createRect.setAttribute("width", 5.7665434);
     createRect.setAttribute(
       "height",
-      (gridMaxHeight / highestYLable) * inputStructure[e]
+      smallBarHeight === 0 ? 0 : smallBarHeight - separation
     );
     createRect.setAttribute("x", 22.581184);
-    createRect.setAttribute(
-      "y",
-      (80.834364 *
-        (100 - (100 * ((inputStructure[e] * 100) / highestYLable)) / 100)) /
-        100
-    );
-    // 79.834364 - 0% 53.7822789 - 33%, 1.7822789 - 100%
+    createRect.setAttribute("y", yStartingPoint);
     createG.appendChild(createRect);
-    console.log((gridMaxHeight / highestYLable) * inputStructure[e]);
-    console.log(
-      Math.round(
-        100 - (100 * ((inputStructure[e] * 100) / highestYLable)) / 100
-      )
-    );
+    separation = numOf === 0 && separation === 0 ? 0 : 1.1;
   });
   chartBars.appendChild(createG);
 }
 
-addBar({ numOfRest: 5, numOfLetters: 5, numOfDigits: 10 });
+addBar({ numOfRest: 4, numOfLetters: 6, numOfDigits: 3 });
 
 // Dodanie aktualnego roku w miejscu uzytej klasy "current-year"
 function addCurrentYear() {
