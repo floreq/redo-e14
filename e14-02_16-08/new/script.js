@@ -12,6 +12,7 @@ form.addEventListener("submit", e => {
     input.value.length > highestLength ? input.value.length : highestLength;
 
   updateYLabels();
+  updateBars();
   addXLabels();
   addBar(inputStructure(input));
 });
@@ -122,8 +123,8 @@ function addBar(inputStructure) {
   let separation = 0; // Pierwszy odstep jest rowny 0, pozniej 1.1
 
   Object.keys(inputStructure).forEach(e => {
-    numOf = inputStructure[e]; // Ilosc, np. wartosc numOfLetters
-    smallBarHeight = (gridMaxHeight / highestYLable) * numOf; // Wyliczenie jaka powinien miec maly slupek wysokosc
+    const numOf = inputStructure[e]; // Ilosc, np. wartosc numOfLetters
+    const smallBarHeight = (gridMaxHeight / highestYLable) * numOf; // Wyliczenie jaka powinien miec maly slupek wysokosc
     yStartingPoint -= smallBarHeight; // Dostosowanie poczatkowego punktu w odniesieniu do wysokosci
     const createRect = document.createElementNS(
       "http://www.w3.org/2000/svg",
@@ -143,20 +144,34 @@ function addBar(inputStructure) {
     createG.appendChild(createRect);
     separation = numOf === 0 && separation === 0 ? 0 : 1.1;
   });
-  chartBars.appendChild(createG);
+  chartBars.insertBefore(createG, chartBars.firstChild);
 }
 
+// Przesowanie slupkow oraz aktualizacja skali
 function updateBars() {
   const chartBars = document.querySelectorAll("#chart-bars g");
+  // Wykonanie na duzych slupkach
   for (let i = 0; i < chartBars.length; i++) {
-    const bar = chartBars[i];
-    for (let i = 0; i < bar.length; i++) {
-      console.log(bar[i]);
+    const bar = chartBars[i].children;
+    // Wykonanie na malych slupkach w duzym slupku
+    let yStartingPoint = 79.834364;
+    let separation = 0; // Pierwszy odstep jest rowny 0, pozniej 1.1
+    for (let rect = 0; rect < bar.length; rect++) {
+      const e = bar[rect];
+      const numOf = Number(e.getAttribute("data-value")); // Odczytanie ilosci, np. numOfNumbers = 5
+      const smallBarHeight = (gridMaxHeight / highestYLable) * numOf; // Wyliczenie jaka powinien miec maly slupek wysokosc
+      yStartingPoint -= smallBarHeight; // Dostosowanie poczatkowego punktu w odniesieniu do wysokosci
+      const x = parseFloat(e.getAttribute("x"));
+      e.setAttribute("x", x + 26); // Przesuiecie starego slupka (o jeden w prawo)
+      e.setAttribute(
+        "height",
+        smallBarHeight === 0 ? 0 : smallBarHeight - separation
+      );
+      e.setAttribute("y", yStartingPoint);
+      separation = numOf === 0 && separation === 0 ? 0 : 1.1;
     }
-    console.log(bar);
   }
 }
-updateBars();
 
 // Dodanie aktualnego roku w miejscu uzytej klasy "current-year"
 function addCurrentYear() {
