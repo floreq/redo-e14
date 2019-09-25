@@ -106,6 +106,7 @@ function addXLabels() {
     xLabels[i].setAttribute("x", x + 26);
   }
 }
+
 // Dodane slupka wykresu
 function addBar(inputStructure) {
   const chartBars = document.querySelector("#chart-bars");
@@ -119,6 +120,7 @@ function addBar(inputStructure) {
   // 79.834364 - 0% 53.7822789 - 33%, 1.7822789 - 100%
   let yStartingPoint = 79.834364;
   let separation = 0; // Pierwszy odstep jest rowny 0, pozniej 1.1
+
   Object.keys(inputStructure).forEach(e => {
     numOf = inputStructure[e]; // Ilosc, np. wartosc numOfLetters
     smallBarHeight = (gridMaxHeight / highestYLable) * numOf; // Wyliczenie jaka powinien miec maly slupek wysokosc
@@ -137,13 +139,24 @@ function addBar(inputStructure) {
     );
     createRect.setAttribute("x", 22.581184);
     createRect.setAttribute("y", yStartingPoint);
+    createRect.setAttribute("data-value", numOf);
     createG.appendChild(createRect);
     separation = numOf === 0 && separation === 0 ? 0 : 1.1;
   });
   chartBars.appendChild(createG);
 }
 
-addBar({ numOfRest: 4, numOfLetters: 6, numOfDigits: 3 });
+function updateBars() {
+  const chartBars = document.querySelectorAll("#chart-bars g");
+  for (let i = 0; i < chartBars.length; i++) {
+    const bar = chartBars[i];
+    for (let i = 0; i < bar.length; i++) {
+      console.log(bar[i]);
+    }
+    console.log(bar);
+  }
+}
+updateBars();
 
 // Dodanie aktualnego roku w miejscu uzytej klasy "current-year"
 function addCurrentYear() {
